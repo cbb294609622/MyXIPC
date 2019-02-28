@@ -46,7 +46,11 @@
             使用完，必须断开连接，以保持下次连接成功。
             XIPC.disconnect(getContext());//上下文请使用XIPC中getContext
 
-*以上数据以及代码是根据xiaofei和xuexiangjys两位大神所制作的Demo*
+*以上数据以及代码是根据*
+    xiaofei      [https://github.com/Xiaofei-it/Hermes]
+    xuexiangjys  [https://github.com/xuexiangjys/XIPC]
+
+*两位大神所制作的Demo*
 
 ***特别感谢***
 
