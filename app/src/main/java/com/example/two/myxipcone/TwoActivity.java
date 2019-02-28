@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.two.baselib.impl.IDataManager;
 import com.example.two.baselib.impl.IUserManager;
 import com.xuexiang.xipc.XIPC;
 import com.xuexiang.xipc.core.channel.IPCListener;
@@ -23,15 +24,27 @@ public class TwoActivity extends AppCompatActivity {
 
         tv = findViewById(R.id.tv);
 
+//        XIPC.connect(getContext());
+//        XIPC.setIPCListener(new IPCListener() {
+//            @Override
+//            public void onIPCConnected(Class<? extends IPCService> service) {
+//                Toast.makeText(TwoActivity.this,"绑定成功",Toast.LENGTH_SHORT).show();
+//                IUserManager is = XIPC.getInstance(IUserManager.class);
+//                tv.setText(is.getUser()+"---1");
+//            }
+//        });
+
         XIPC.connect(getContext());
         XIPC.setIPCListener(new IPCListener() {
             @Override
             public void onIPCConnected(Class<? extends IPCService> service) {
                 Toast.makeText(TwoActivity.this,"绑定成功",Toast.LENGTH_SHORT).show();
-                IUserManager is = XIPC.getInstance(IUserManager.class);
-                tv.setText(is.getUser()+"---1");
+                IDataManager is = XIPC.getInstance(IDataManager.class);
+                tv.setText(is.getString("name")+"---1");
             }
         });
+
+
     }
 
     @Override

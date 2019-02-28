@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.two.baselib.mode.DataManager;
 import com.example.two.baselib.mode.UserManager;
 
 
@@ -22,13 +23,18 @@ public class MainActivity extends AppCompatActivity {
         tv = findViewById(R.id.tv);
         btn = findViewById(R.id.btn);
 
-        UserManager.getInstance().setUser("我的名字改了!");//修改一下单例的内容
-        tv.setText(UserManager.getInstance().getUser()+"---1");
+//        UserManager.getInstance().setUser("我的名字改了!");//修改一下单例的内容
+//        tv.setText(UserManager.getInstance().getUser()+"---1");
+
+        DataManager.getInstance().setSaveString("name","王大锤");
+        tv.setText(DataManager.getInstance().getString("name"));
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,TwoActivity.class));
             }
         });
+
     }
 }

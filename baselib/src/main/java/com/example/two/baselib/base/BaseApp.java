@@ -3,6 +3,9 @@ package com.example.two.baselib.base;
 import android.app.Application;
 
 import com.example.two.baselib.BuildConfig;
+import com.example.two.baselib.impl.IDataManager;
+import com.example.two.baselib.impl.IUserManager;
+import com.example.two.baselib.mode.DataManager;
 import com.example.two.baselib.mode.UserManager;
 import com.xuexiang.xipc.XIPC;
 
@@ -22,10 +25,15 @@ public class BaseApp extends Application{
     private void initXIPC() {
         XIPC.init(this);
         XIPC.debug(BuildConfig.DEBUG);
-        XIPC.register(UserManager.class);
+//        XIPC.register(UserManager.class);
+//        XIPC.register(IUserManager.class);
 
-        //注册包名下的所有定义的接口
-        XIPC.register("com.example.two.twoapp.baselib.impl");
+
+        XIPC.register(DataManager.class);
+        XIPC.register(IDataManager.class);
+
+        //注册包名下的所有定义的接口or实现
+//        XIPC.register("com.example.two.twoapp.baselib.impl");
     }
 
 }
