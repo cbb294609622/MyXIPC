@@ -47,8 +47,8 @@
             XIPC.disconnect(getContext());//上下文请使用XIPC中getContext
 
 *以上数据以及代码是根据*
-    xiaofei      [https://github.com/Xiaofei-it/Hermes]
-    xuexiangjys  [https://github.com/xuexiangjys/XIPC]
+    ***[xiaofei](https://github.com/Xiaofei-it/Hermes)***
+    ***[xuexiangjys](https://github.com/xuexiangjys/XIPC)***
 
 *两位大神所制作的Demo*
 
