@@ -34,7 +34,7 @@ public class UserManager implements IUserManager {
     private String mUser;
 
     private UserManager() {
-        mUser = "我的名字叫:XIPC";
+        mUser = "";
     }
 
     @Singleton
