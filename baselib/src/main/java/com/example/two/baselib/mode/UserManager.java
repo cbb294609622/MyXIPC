@@ -55,8 +55,10 @@ public class UserManager implements IUserManager {
         return mUser;
     }
 
-    public UserManager setUser(String user) {
+    @MethodName("setUser")
+    @Override
+    public void setUser(String user){
         mUser = user;
-        return this;
     }
+
 }

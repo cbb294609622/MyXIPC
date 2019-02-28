@@ -14,23 +14,14 @@
  * limitations under the License.
  */
 
-package com.example.two.baselib.impl;
+package com.example.two.threeapp;
 
-import com.xuexiang.xipc.annotation.ClassName;
-import com.xuexiang.xipc.annotation.MethodName;
+import com.example.two.baselib.base.BaseApp;
 
-/**
- * 测试单例的获取
- *
- * @author xuexiang
- * @since 2018/9/18 上午9:56
- */
-@ClassName("UserManager")
-public interface IUserManager {
+public class App extends BaseApp {
 
-    @MethodName("getUser")
-    String getUser();
-
-    @MethodName("setUser")
-    void setUser(String user);
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
 }

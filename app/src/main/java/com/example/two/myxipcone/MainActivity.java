@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn);
 
         UserManager.getInstance().setUser("我的名字改了!");//修改一下单例的内容
-        tv.setText(UserManager.getInstance().getUser());
+        tv.setText(UserManager.getInstance().getUser()+"---1");
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
